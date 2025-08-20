@@ -75,7 +75,7 @@ export default function NeonIntro() {
             className="absolute inset-0"
             initial={{ opacity: 0, scale: 1.3 }}
             animate={{ opacity: triggered ? 0 : 0.8, scale: 1 }}
-            transition={{ duration: 2, ease: [0.25, 1, 0.5, 1] }}
+            transition={{ duration: 2, ease: [0.25, 1, 0.5, 1], delay: 1 }}
           >
             <Image
               src="/images/smoke.png"
@@ -93,7 +93,8 @@ export default function NeonIntro() {
             animate={{ opacity: 1, y: 0, scale: triggered ? 0.2 : 1 }}
             transition={{
               duration: 2,
-              ease: [0.16, 1, 0.3, 1], // "easeOutBack" style
+              ease: [0.16, 1, 0.3, 1],
+              delay: 1, // "easeOutBack" style
             }}
           >
             LOCAL
