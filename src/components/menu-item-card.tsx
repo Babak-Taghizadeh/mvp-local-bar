@@ -77,7 +77,7 @@ export default function MenuItemCard({ item }: { item: MenuItem }) {
       </motion.div>
 
       <motion.div
-        className="absolute top-20 left-0 right-0 flex justify-center space-x-3"
+        className="absolute top-18 left-0 right-0 flex justify-center space-x-3"
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.3 }}

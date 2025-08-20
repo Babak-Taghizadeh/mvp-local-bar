@@ -80,9 +80,10 @@ export default function NeonIntro() {
             <Image
               src="/images/smoke.png"
               alt="Smoke background"
-              fill
-              className="object-cover"
               priority
+              fill
+              quality={40}
+              className="object-cover"
             />
           </motion.div>
 

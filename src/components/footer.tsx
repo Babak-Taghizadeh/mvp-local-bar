@@ -28,6 +28,7 @@ export default function Footer() {
           alt="Cafe Cat"
           width={110}
           height={110}
+          loading="lazy"
           className="drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]"
         />
       </motion.div>

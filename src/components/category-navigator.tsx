@@ -58,7 +58,7 @@ export default function CategoryNavigator({
           whileTap={{ scale: 0.97 }}
           className={cn(
             "mt-auto flex items-center justify-center gap-3 p-3 rounded-md border text-base font-bold transition-all duration-300",
-            selectedCategory === "burgers"
+            selectedCategory === "meal"
               ? "bg-black/80 text-red-500 border-red-500 shadow-[0_0_12px_#ff0000]"
               : "bg-black/60 text-gray-200 border-gray-600 hover:bg-black/70 hover:text-yellow-300"
           )}

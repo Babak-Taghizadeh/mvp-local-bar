@@ -19,6 +19,7 @@ export default function MenuSection() {
       <Image
         src="/images/pink-panther.png"
         alt="Pink Panther"
+        loading="lazy"
         width={70}
         height={70}
         className="absolute -right-1 top-16 rotate-[-5deg]"
