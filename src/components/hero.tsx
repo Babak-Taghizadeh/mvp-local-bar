@@ -18,7 +18,6 @@ export default function Hero() {
           src="/images/guitar1.jpg"
           alt="Guitar texture"
           fill
-          loading="lazy"
           className="object-cover opacity-50"
         />
       </motion.div>

@@ -82,7 +82,7 @@ export default function NeonIntro() {
               alt="Smoke background"
               priority
               fill
-              quality={40}
+              quality={20}
               className="object-cover"
             />
           </motion.div>
