@@ -1,26 +1,136 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Neon";
+  src: url("/fonts/Neon1.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Tailwind utility for local font */
+.font-neon {
+  font-family: "Neon", sans-serif;
+}
+
+.font-roboto {
+  font-family: "Roboto", sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Base Colors */
+  --background: #0a0a0a; /* Deep Black */
+  --foreground: #ededed; /* Soft White */
+
+  /* Neon Palette */
+  --neon-red: #ff1e1e;
+  --neon-pink: #ff3daf;
+  --neon-cyan: #00ffd5;
+  --neon-purple: #a020ff;
+
+  /* Neutral Accents */
+  --charcoal: #1f1f1f;
+  --muted-gray: #777777;
+  --accent: #ffb700;
+
+  --record-label: #1a1a1a; /* Dark gray for record background */
+  --gold: #8b4513;
 }
 
 @theme inline {
+  /* Base theme vars */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  /* Neon colors */
+  --color-neon-red: var(--neon-red);
+  --color-neon-pink: var(--neon-pink);
+  --color-neon-cyan: var(--neon-cyan);
+  --color-neon-purple: var(--neon-purple);
+
+  /* Neutral accents */
+  --color-charcoal: var(--charcoal);
+  --color-muted-gray: var(--muted-gray);
+  --color-accent: var(--accent);
+  --color-record-label: var(--record-label);
+  --color-gold: var(--gold);
+
+  /* Fonts */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes pulse-slow {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s infinite;
+}
+
+@keyframes flicker {
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    opacity: 1;
+  }
+  20%,
+  22%,
+  24%,
+  55% {
+    opacity: 0.4;
+  }
+}
+.animate-flicker {
+  animation: flicker 1.5s infinite;
+}
+
+@keyframes lantern-flicker {
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 6px #ffb700) drop-shadow(0 0 6px #ff9a00);
+  }
+  20%,
+  22%,
+  24%,
+  55% {
+    opacity: 0.5;
+    filter: drop-shadow(0 0 1px #ffb700) drop-shadow(0 0 5px #ff9a00);
+  }
+}
+
+.animate-lantern-flicker {
+  animation: lantern-flicker 2.2s infinite;
 }
