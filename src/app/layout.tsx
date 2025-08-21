@@ -3,7 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Local Slow Bar | Menu",
+  title: "Cafe Rock | Menu",
   description: "",
 };
 

@@ -69,13 +69,13 @@ export default function NeonIntro() {
               ? "circle(0% at 50% 50%)"
               : "circle(100% at 50% 50%)",
           }}
-          transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
         >
           <motion.div
             className="absolute inset-0"
             initial={{ opacity: 0, scale: 1.3 }}
             animate={{ opacity: triggered ? 0 : 0.8, scale: 1 }}
-            transition={{ duration: 2, ease: [0.25, 1, 0.5, 1], delay: 1 }}
+            transition={{ duration: 2, ease: [0.25, 1, 0.5, 1], delay: 0.6 }}
           >
             <Image
               src="/images/smoke.png"
@@ -94,7 +94,7 @@ export default function NeonIntro() {
             transition={{
               duration: 2,
               ease: [0.16, 1, 0.3, 1],
-              delay: 1, // "easeOutBack" style
+              delay: 0.6, // "easeOutBack" style
             }}
           >
             CAFE
