@@ -5,7 +5,7 @@ import Footer from "./footer";
 
 const MainContent = () => {
   return (
-    <div className="relative w-full min-h-screen overflow-x-hidden">
+    <div className="relative w-full overflow-x-hidden">
       <Header />
       <Hero />
       <MenuSection />

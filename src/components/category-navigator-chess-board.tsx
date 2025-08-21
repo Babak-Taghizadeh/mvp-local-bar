@@ -26,7 +26,7 @@ const categories: Category[] = [
   { id: "dessert", name: "Cake & Dessert", icon: "♗" },
 ];
 
-export default function CategoryNavigator({
+export default function CategoryNavigatorChessBoard({
   selectedCategory,
   onCategoryChange,
 }: CategoryNavigatorProps) {

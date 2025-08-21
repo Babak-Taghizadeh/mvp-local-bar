@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import CategoryNavigator from "./category-navigator";
 import MenuItemCard from "./menu-item-card";
 import { menuItems } from "@/lib/menu-data";
 import { motion } from "motion/react";
 import Image from "next/image";
+import CategoryNavigatorAMP from "./category-navigator-amp";
 
 export default function MenuSection() {
   const [selectedCategory, setSelectedCategory] = useState("coffee");
@@ -15,7 +15,16 @@ export default function MenuSection() {
   );
 
   return (
-    <section className="relative min-h-screen bg-black py-20 px-4">
+    <section className="relative py-20 px-4 overflow-hidden">
+      {/* Amped Gradient Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#2c1810] via-[#1a0f0a] to-[#3d2918] opacity-95" />
+
+      {/* Subtle Stage Lighting Effect */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-0 left-1/4 w-1/3 h-96 bg-red-600/20 rounded-full blur-3xl" />
+        <div className="absolute top-0 right-1/4 w-1/3 h-96 bg-amber-500/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-1/2 w-1/2 h-96 bg-[#ff1e1e]/10 rounded-full blur-3xl" />
+      </div>
       <Image
         src="/images/pink-panther.png"
         alt="Pink Panther"
@@ -26,7 +35,7 @@ export default function MenuSection() {
       />
       <h2
         className="text-4xl md:text-6xl font-bold text-center text-neon-red 
-        mb-10 drop-shadow-[0_0_20px_#ff0000] font-neon"
+        mb-10 drop-shadow-[0_0_20px_#ff0000]"
       >
         THE MENU
       </h2>
@@ -50,11 +59,13 @@ export default function MenuSection() {
         <span className="text-white font-medium drop-shadow-[0_0_8px_rgba(255,255,255,0.2)]">
           Sound for the spirit.
         </span>{" "}
-        <span className="text-gold font-medium">Perfection in every cup.</span>
+        <span className="text-white font-medium drop-shadow-[0_0_8px_rgba(255,255,255,0.2)]">
+          Perfection in every cup.
+        </span>
       </motion.p>
 
-      <div className="mb-20">
-        <CategoryNavigator
+      <div className="mb-14">
+        <CategoryNavigatorAMP
           selectedCategory={selectedCategory}
           onCategoryChange={setSelectedCategory}
         />

@@ -15,15 +15,13 @@ interface MenuItem {
 export default function MenuItemCard({ item }: { item: MenuItem }) {
   return (
     <motion.div
-      className="relative w-56 h-56 bg-gradient-to-br from-[#1a1a1a] to-[#2d2d2d] rounded-full border-4 border-[#8B4513]
+      className="relative w-52 h-52 bg-gradient-to-br from-[#1a1a1a] to-[#2d2d2d] rounded-full border-4 border-[#8B4513]
         p-8 text-center shadow-2xl group cursor-pointer"
-      whileHover={{
-        rotate: 3,
-        scale: 1.08,
-        boxShadow: "0 0 30px rgba(139, 69, 19, 0.4)",
-      }}
+      initial={{ scale: 0, opacity: 0 }}
+      whileInView={{ scale: 1, opacity: 1 }}
+      viewport={{ once: true }}
       whileTap={{ scale: 0.98 }}
-      transition={{ type: "spring", stiffness: 300, damping: 15 }}
+      transition={{ duration: 0.6 }}
     >
       <div className="absolute inset-0 rounded-full bg-[#8B4513] opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
 
@@ -41,7 +39,7 @@ export default function MenuItemCard({ item }: { item: MenuItem }) {
       )}
 
       <div
-        className="absolute top-1/2 left-1/2 w-16 h-16 -mt-8 -ml-8 bg-gradient-to-br from-black to-gray-900 
+        className="absolute top-1/2 left-1/2 w-14 h-14 -mt-7 -ml-7 bg-gradient-to-br from-black to-gray-900 
         rounded-full border-2 border-gold shadow-inner"
       >
         <div className="absolute top-2 left-2 w-2 h-2 bg-white/30 rounded-full blur-sm" />
@@ -55,11 +53,9 @@ export default function MenuItemCard({ item }: { item: MenuItem }) {
         {item.price} T
       </motion.div>
 
-      <div className="absolute top-9 left-0 right-0 px-4">
+      <div className="absolute top-7 left-0 right-0 px-4">
         <motion.h3
-          className="text-lg font-black font-neon uppercase tracking-wider 
-          text-foreground
-          drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
+          className="text-lg font-black uppercase tracking-wider text-foreground drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
           whileHover={{ scale: 1.05 }}
         >
           {item.name}
@@ -67,7 +63,7 @@ export default function MenuItemCard({ item }: { item: MenuItem }) {
       </div>
 
       <motion.div
-        className="absolute bottom-10 left-0 right-0 px-6"
+        className="absolute bottom-11 left-0 right-0 px-5"
         initial={{ opacity: 0.8 }}
         whileHover={{ opacity: 1 }}
       >
@@ -77,10 +73,10 @@ export default function MenuItemCard({ item }: { item: MenuItem }) {
       </motion.div>
 
       <motion.div
-        className="absolute top-18 left-0 right-0 flex justify-center space-x-3"
+        className="absolute top-22 left-22 right-0 flex justify-center space-x-3"
         initial={{ y: 10, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.3 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ delay: 1 }}
       >
         {item.isSpicy && (
           <motion.span

@@ -17,6 +17,7 @@ export default function Hero() {
         <Image
           src="/images/guitar1.jpg"
           alt="Guitar texture"
+          quality={10}
           fill
           className="object-cover opacity-50"
         />
@@ -32,24 +33,25 @@ export default function Hero() {
         animate={{ opacity: 1 }}
         transition={{ duration: 2, ease: "easeOut", delay: 0.4 }}
       >
-        11 AM
-        <ArrowRightLeft />1 AM
+        8 AM
+        <ArrowRightLeft />
+        12 AM
       </motion.p>
 
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
-        className="absolute bottom-44 border z-30 border-foreground right-4 shadow-lg bg-charcoal rounded-xl"
+        className="absolute bottom-44 border z-30 border-foreground/60 right-4 shadow-lg bg-charcoal rounded-xl"
       >
         <Link
-          href="https://maps.app.goo.gl/3LxXb1Tuazuwsf719"
+          href="https://maps.app.goo.gl/91xrjoLaj3E5WfuQ8"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-foreground font-bold p-3 flex items-center gap-2"
+          className="text-foreborder-foreground/60 font-bold p-3 flex items-center gap-2"
         >
           Directions
-          <LandPlot />
+          <LandPlot className="animate-pulse" />
         </Link>
       </motion.div>
 
@@ -74,6 +76,8 @@ export default function Hero() {
           <Image
             src="/images/coffee.png"
             alt="Ice Latte"
+            loading="lazy"
+            quality={10}
             width={60}
             height={60}
             className="rotate-12 opacity-90"
@@ -95,6 +99,8 @@ export default function Hero() {
           <Image
             src="/images/burger.png"
             alt="Burger"
+            loading="lazy"
+            quality={10}
             width={60}
             height={60}
             className="rotate-[-15deg] opacity-90"
@@ -117,6 +123,9 @@ export default function Hero() {
           <Image
             src="/images/vinyl.png"
             alt="Vinyl record"
+            loading="lazy"
+
+            quality={10}
             width={80}
             height={80}
             className="opacity-90"
@@ -126,24 +135,15 @@ export default function Hero() {
 
       <motion.div
         className="relative z-10 flex flex-col items-center"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
+        initial={{ y: 30 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.7 }}
       >
-        <div className="relative group">
-          <motion.div
-            className="absolute -bottom-28 left-0 right-0 flex justify-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
-          >
-            <div className="bg-background/40 px-7 py-4 rounded-full border border-white/10 backdrop-blur-sm">
-              <h2 className="text-3xl md:text-4xl font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-[#42f5cb]/80 to-[#8B4513]">
-                Local Like You
-              </h2>
-              <div className="absolute -right-2 -bottom-2 w-4 h-4 bg-[#8B4513] rounded-full animate-pulse" />
-            </div>
-          </motion.div>
+        <div className="relative -bottom-10 left-0 right-0 flex justify-center items-center bg-background/40 px-3 py-2 rounded-3xl border border-white/10 backdrop-blur-sm">
+          <h2 className="text-xl md:text-4xl font-bold  text-transparent bg-clip-text bg-gradient-to-r from-[#42f5cb]/80 to-[#8B4513]">
+            11 YEARS. <br />0 POP SONGS
+          </h2>
+          <div className="absolute -right-10 -bottom-10 w-4 h-4 bg-gold rounded-full animate-pulse" />
         </div>
       </motion.div>
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50 pointer-events-none" />

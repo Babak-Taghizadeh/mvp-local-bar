@@ -62,7 +62,7 @@ export default function NeonIntro() {
     <AnimatePresence>
       {!introComplete && (
         <motion.div
-          className="absolute inset-0 z-40 bg-background"
+          className="absolute inset-0 z-40 bg-black"
           initial={{ clipPath: "circle(100% at 50% 50%)" }}
           animate={{
             clipPath: triggered
@@ -82,13 +82,13 @@ export default function NeonIntro() {
               alt="Smoke background"
               priority
               fill
-              quality={20}
+              quality={10}
               className="object-cover"
             />
           </motion.div>
 
           <motion.h1
-            className="absolute inset-0 flex items-center font-neon justify-center text-neon-red text-7xl md:text-8xl text-center font-bold tracking-wider drop-shadow-[0_0_25px_var(--color-neon-red)]"
+            className="absolute inset-0 flex flex-col items-center -font-roboto justify-center text-neon-red text-7xl md:text-8xl text-center font-bold tracking-wider drop-shadow-[0_0_25px_var(--color-neon-red)]"
             initial={{ opacity: 0, y: 100, scale: 0.7 }}
             animate={{ opacity: 1, y: 0, scale: triggered ? 0.2 : 1 }}
             transition={{
@@ -97,13 +97,14 @@ export default function NeonIntro() {
               delay: 1, // "easeOutBack" style
             }}
           >
-            LOCAL
+            CAFE
             <br />
-            SLOW
+            ROCK
             <br />
-            BAR
+            <p className="text-lg mt-8">
+              TEHRAN&apos;S HOME OF METAL & MEALS FOR 11 YEARS
+            </p>
           </motion.h1>
-
           <motion.div
             className="absolute bottom-16 w-full flex flex-col items-center space-y-2"
             initial={{ opacity: 1 }}

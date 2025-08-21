@@ -2,18 +2,26 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="fixed w-[90%] mx-auto top-4 left-0 right-0 z-40 flex items-center justify-center px-8 py-6 rounded-2xl bg-background/40 backdrop-blur-md border border-foreground/20">
-      <div className="absolute -left-4 top-4">
+    <header className="fixed w-[90%] mx-auto top-4 left-0 right-0 z-40 flex items-center justify-center py-0 rounded-2xl bg-black/40 backdrop-blur-md border border-foreground/20">
+      <div className="absolute -left-11 top-4">
         <Image
           src="/images/lamp-left.png"
           alt="Wall Lantern Left"
-          width={50}
-          height={80}
+          quality={10}
+          width={120}
+          height={100}
           className="drop-shadow-[0_0_8px_var(--color-accent)] animate-lantern-flicker"
         />
       </div>
 
-      <h1
+      <Image
+        src="/images/rock-logo-1.png"
+        alt="Logo"
+        width={80}
+        height={80}
+        className="drop-shadow-[0_0_10px_var(--color-accent)]"
+      />
+      {/* <h1
         className="text-[24px] md:text-3xl font-bold z-10 tracking-wider 
           drop-shadow-[0_0_2px_var(--color-accent)]
           text-transparent
@@ -22,14 +30,15 @@ export default function Header() {
           "
       >
         LOCAL SLOW BAR
-      </h1>
+      </h1> */}
 
-      <div className="absolute -right-4 top-4">
+      <div className="absolute -right-11 top-4">
         <Image
           src="/images/lamp-right.png"
           alt="Wall Lantern Right"
-          width={50}
-          height={80}
+          quality={10}
+          width={120}
+          height={100}
           className="drop-shadow-[0_0_8px_var(--color-accent)] animate-lantern-flicker"
         />
       </div>

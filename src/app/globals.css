@@ -1,33 +1,8 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: "Neon";
-  src: url("/fonts/Neon1.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url("/fonts/Roboto.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Tailwind utility for local font */
-.font-neon {
-  font-family: "Neon", sans-serif;
-}
-
-.font-roboto {
-  font-family: "Roboto", sans-serif;
-}
-
 :root {
   /* Base Colors */
-  --background: #0a0a0a; /* Deep Black */
+  --background: #2c1810; /* Deep Black */
   --foreground: #ededed; /* Soft White */
 
   /* Neon Palette */
@@ -37,7 +12,7 @@
   --neon-purple: #a020ff;
 
   /* Neutral Accents */
-  --charcoal: #1f1f1f;
+  --charcoal: #1b1b1b;
   --muted-gray: #777777;
   --accent: #ffb700;
 
@@ -64,14 +39,12 @@
   --color-gold: var(--gold);
 
   /* Fonts */
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-roboto: var(--font-roboto);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 @keyframes pulse-slow {
@@ -120,14 +93,14 @@ body {
   56%,
   100% {
     opacity: 1;
-    filter: drop-shadow(0 0 6px #ffb700) drop-shadow(0 0 6px #ff9a00);
+    filter: drop-shadow(0 0 6px #d3c292) drop-shadow(0 0 6px #fab854);
   }
   20%,
   22%,
   24%,
   55% {
     opacity: 0.5;
-    filter: drop-shadow(0 0 1px #ffb700) drop-shadow(0 0 5px #ff9a00);
+    filter: drop-shadow(0 0 1px #000000) drop-shadow(0 0 5px #24221e);
   }
 }
 

@@ -70,7 +70,7 @@ export default function FoodItemCard({ item }: { item: MenuItem }) {
           whileHover={{ opacity: 1 }}
         >
           <p
-            className="text-[#3d2918] text-sm leading-relaxed font-handwriting 
+            className="text-[#3d2918] text-sm leading-relaxed 
             text-center italic"
           >
             {item.description}
